@@ -47,6 +47,12 @@ body {
   background-color:#28ABFF;
   color: white;
 }
+.circular-img {
+        width: 200px; /* Adjust size as needed */
+        height: 200px; /* Ensure width and height are equal for a perfect circle */
+        border-radius: 50%; /* This makes the element circular */
+        overflow: hidden; /* Ensures the image is clipped to the circle */
+    }
 </style>
 </head>
 
@@ -99,7 +105,8 @@ body {
 
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="max-width:100%"  alt="profile photo" src="data/me.jpg" class="circular"> 
+              <div class="circular-img"><img style="max-width:100%"  alt="profile photo" src="data/me.jpg" class="circular"> </div>
+              
               <!--style="width:100%;max-width:100%" class ='hoverZoomLink '-->
 
             </td>
