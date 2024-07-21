@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>Divyagna Bavikadi</title>
   
@@ -21,6 +22,28 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112406581-4"></script>
 
   <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=hpMMmLfFY-aGk59ohgdBBqP40FtDeo--maK6jl8rUcY"></script>
+
+  <script>
+    function toggleReadMore() {
+        var hiddenItems = document.querySelectorAll('.hidden-item');
+    
+        hiddenItems.forEach(function(item) {
+            if (item.style.display === 'none' || item.style.display === '') {
+                item.style.display = 'list-item';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    
+        var buttonText = document.getElementById('readMoreBtn');
+    
+        if (buttonText.textContent === 'Read More') {
+            buttonText.textContent = 'Read Less';
+        } else {
+            buttonText.textContent = 'Read More';
+        }
+    }
+  </script>
 
   <script>
     window.dataLayer = window.dataLayer ||  [] ;
@@ -64,6 +87,10 @@ body {
         border-radius: 5%; /* This makes the element circular */
         overflow: hidden; /* Ensures the image is clipped to the circle */
     }
+
+.hidden-item {
+    display: none; /* Hide items beyond the initially visible ones */
+}
 </style>
 </head>
 
@@ -202,7 +229,8 @@ body {
                 <li><strong>Aug '21 → </strong> Started working as a Research Intern at <a href="https://www.iiit.ac.in/"> IIITH</a>.</li> 
                 <li><strong>May '21 → </strong> Graduated from School of Engineering, <a href="https://www.cuk.ac.in/#/home">CUK</a>, with a Bachelor's degree in ECE with <strong>Rank 1</strong> in the school of engineering and <strong>Gold Medal</strong>. </li> 
               </ul>
-              <label for="post-2" class="read-more-trigger"></label>
+              <!-- <label for="post-2" class="read-more-trigger"></label> -->
+              <button onclick="toggleReadMore()" id="readMoreBtn">Read More</button>
             </td>
           </tr>
 		      </tbody>
